@@ -1,4 +1,4 @@
-import dynamic from "next/dynamic";
+import dynamicImport from "next/dynamic";
 import { Suspense } from "react";
 import { CardHeader } from "./_components/HeroSection/CardHeader";
 import MarketHeader from "./_components/Marketplace/MarketHeader";
@@ -6,7 +6,9 @@ import HeroSection from "./_components/HeroSection";
 import { CardHeaderSkeleton, CardSkeleton } from "./_components/CardSkeleton";
 import { SourceSectionSkeleton } from "./_components/SourceSectionClient";
 
-const SourceSectionClient = dynamic(
+export const dynamic = "force-dynamic";
+
+const SourceSectionClient = dynamicImport(
   () => import("./_components/SourceSectionClient"),
   {
     ssr: true,
@@ -14,7 +16,7 @@ const SourceSectionClient = dynamic(
   },
 );
 
-const PokemonGridWrapper = dynamic(
+const PokemonGridWrapper = dynamicImport(
   () => import("./_components/HeroSection/PokemonGridWrapper"),
   {
     ssr: true,
@@ -22,11 +24,11 @@ const PokemonGridWrapper = dynamic(
   },
 );
 
-const MarketPlace = dynamic(() => import("./_components/Marketplace"), {
+const MarketPlace = dynamicImport(() => import("./_components/Marketplace"), {
   ssr: true,
 });
 
-const ShowCaseWrapper = dynamic(
+const ShowCaseWrapper = dynamicImport(
   () => import("./_components/Marketplace/ShowcaseWrapper"),
   {
     ssr: true,

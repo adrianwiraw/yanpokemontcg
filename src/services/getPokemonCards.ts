@@ -4,8 +4,8 @@ export async function getPokemonCards(): Promise<PokemonCard[]> {
   const res = await fetch(
     "https://api.pokemontcg.io/v2/cards?page=1&pageSize=250",
     {
-      // Cache gambar selama 1 hari (86400 detik)
-      next: { revalidate: 86400 }, // ISR: revalidate setiap 24 jam
+      // The external API must be queried at request time, not during `next build`.
+      cache: "no-store",
     },
   );
 
