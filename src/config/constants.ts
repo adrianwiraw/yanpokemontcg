@@ -23,7 +23,7 @@ export const API_ENDPOINTS = {
 
 // App Configuration
 export const APP_CONFIG = {
-  APP_NAME: "YanPortfolio",
+  APP_NAME: "YanPokemonTCG",
   APP_VERSION: "0.1.0",
   DESCRIPTION: "Pokemon Card Marketplace & Trading Platform",
 };

@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"os"
 	"time"
-	"yanportfolio/server/config"
-	"yanportfolio/server/models"
+	"yanpokemontcg/server/config"
+	"yanpokemontcg/server/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/midtrans/midtrans-go"

@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	"os"
-	"yanportfolio/server/config"
-	"yanportfolio/server/routes"
+	"yanpokemontcg/server/config"
+	"yanpokemontcg/server/routes"
 
 	"github.com/joho/godotenv"
 )

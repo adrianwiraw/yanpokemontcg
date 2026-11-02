@@ -9,8 +9,8 @@ import (
 	"net/smtp"
 	"os"
 	"time"
-	"yanportfolio/server/config"
-	"yanportfolio/server/models"
+	"yanpokemontcg/server/config"
+	"yanpokemontcg/server/models"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"

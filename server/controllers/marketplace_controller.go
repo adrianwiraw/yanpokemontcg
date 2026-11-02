@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"yanportfolio/server/models"
+	"yanpokemontcg/server/models"
 
 	"github.com/gin-gonic/gin"
 	"go.mongodb.org/mongo-driver/bson"

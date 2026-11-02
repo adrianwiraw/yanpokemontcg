@@ -3,8 +3,8 @@ package routes
 import (
 	"os"
 	"time"
-	"yanportfolio/server/controllers"
-	"yanportfolio/server/middleware"
+	"yanpokemontcg/server/controllers"
+	"yanpokemontcg/server/middleware"
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
@@ -29,7 +29,7 @@ func SetupRouter(db *mongo.Database) *gin.Engine {
 	if frontendURL != "" {
 		allowOrigins = append(allowOrigins, frontendURL)
 	}
-	vercelURL := "https://yanportfolio.vercel.app"
+	vercelURL := "https://yanpokemontcg.vercel.app"
 	if !contains(allowOrigins, vercelURL) {
 		allowOrigins = append(allowOrigins, vercelURL)
 	}

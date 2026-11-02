@@ -2,8 +2,8 @@ package handler
 
 import (
 	"net/http"
-	"yanportfolio/server/config"
-	"yanportfolio/server/routes"
+	"yanpokemontcg/server/config"
+	"yanpokemontcg/server/routes"
 
 	"github.com/joho/godotenv"
 )

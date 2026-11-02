@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"os"
 	"time"
-	"yanportfolio/server/config"
+	"yanpokemontcg/server/config"
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v5"

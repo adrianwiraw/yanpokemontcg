@@ -1,4 +1,4 @@
-module yanportfolio
+module yanpokemontcg
 
 go 1.26.4
 
