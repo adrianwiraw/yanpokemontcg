@@ -33,5 +33,9 @@ func ConnectDB() {
 }
 
 func GetCollection(collectionName string) *mongo.Collection {
-	return DB.Database("pokemontcg_db").Collection(collectionName)
+	dbName := os.Getenv("MONGODB_DB_NAME")
+	if dbName == "" {
+		dbName = "pokemontcg_db"
+	}
+	return DB.Database(dbName).Collection(collectionName)
 }

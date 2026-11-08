@@ -23,9 +23,12 @@ func main() {
 	config.ConnectDB()
 	client := config.DB // Ini menampung *mongo.Client dari db.go lu
 
-	// 4. 🔥 EKSTRAK DATABASE NYA DI SINI JUGA BRE! 🔥
-	// Sesuai dengan database yang lu pakai di MongoDB ("pokemontcg_db")
-	db := client.Database("pokemontcg_db")
+	// Use the configured database name and keep the local default backwards compatible.
+	dbName := os.Getenv("MONGODB_DB_NAME")
+	if dbName == "" {
+		dbName = "pokemontcg_db"
+	}
+	db := client.Database(dbName)
 
 	// 5. Ambil port dari .env, jika tidak ada gunakan default 8080
 	port := os.Getenv("PORT")
